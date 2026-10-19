@@ -17,8 +17,8 @@
 
 | 平台 / Platform | 文件 / File | 说明 / Notes |
 |---|---|---|
-| macOS (Apple Silicon) | `1Z-Transfer-v1.4.0.dmg` | 需要 macOS 14+ / requires macOS 14+ |
-| Android 8.0+ | `1Z-Transfer-v3.3.apk` | 目标平台 Android 17 / targets Android 17 |
+| macOS (Apple Silicon) | `1Z-Transfer-v1.5.0.dmg` | 需要 macOS 14+ / requires macOS 14+ |
+| Android 8.0+ | `1Z-Transfer-v3.4.apk` | 目标平台 Android 17 / targets Android 17 |
 
 > 两个包都是未签名版本，首次打开需要手动放行，见下方「安装」。
 > Both builds are unsigned; see **Install** below for the one-time Gatekeeper / sideload steps.
@@ -37,6 +37,7 @@
 - **悬浮窗**：在其他 App 里也能随时把文件推给电脑。
 - **大图标传输列表**：电脑端以卡片形式罗列传输中的文件，带进度、速度与暂停/继续。
 - **可改保存位置**：电脑端主界面右上角随时切换收件目录。
+- **热点直连**：酒店、校园网这类会隔离设备的 Wi-Fi 连不通时，让手机开热点、电脑连过去，两端直接互传。
 
 **English**
 
@@ -48,6 +49,7 @@
 - **Floating bubble** — send files while you're in another app.
 - **Large-card transfer list** — progress, speed, pause/resume per file.
 - **Configurable save folder** — switch the receive directory from the main window at any time.
+- **Hotspot fallback** — when a hotel/school Wi-Fi isolates devices, turn on the phone's hotspot instead and the two sides talk directly.
 
 ---
 
@@ -95,8 +97,8 @@
 **Q. 文件经过互联网吗？** 不经过。两端在同一个局域网内直连，没有云端、没有账号、没有统计上报。
 **Does traffic go through the internet?** No. Both sides talk directly on your local network — no cloud, no account, no telemetry.
 
-**Q. 找不到对方？** 确认在同一个 Wi-Fi；某些路由器的「AP 隔离 / 客户端隔离」会挡住局域网互访，需要关掉。也可以手动填对方 IP。
-**Can't find each other?** Make sure you're on the same Wi-Fi. Some routers enable *AP isolation*, which blocks LAN peers — turn it off. You can also enter the peer IP manually.
+**Q. 找不到对方？** 确认在同一个 Wi-Fi。公共网络常开「AP 隔离」，这时改用热点：手机开热点、电脑连过去，两端 App 里都有「手机热点直连」入口。
+**Can't find each other?** Make sure you're on the same Wi-Fi. Some routers and most public networks enable *AP isolation*, which blocks LAN peers. In that case turn on the phone's hotspot and connect the computer to it — both apps have a **hotspot** option for exactly this.
 
 **Q. 传输速度多少？** 取决于 Wi-Fi。Wi-Fi 6 局域网实测在几十到一百多 MB/s；远好于 MTP 和蓝牙，后者不适合搬大文件。
 **How fast?** Depends on Wi-Fi. On Wi-Fi 6 expect tens to ~100+ MB/s — far faster than MTP, and Bluetooth is not suitable for bulk files.
